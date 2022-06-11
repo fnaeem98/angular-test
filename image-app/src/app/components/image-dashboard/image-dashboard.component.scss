@@ -1,0 +1,22 @@
+@import '../../../variables.scss';
+
+.image-app {
+    
+    .image-item {
+      margin-bottom: $app-margin-16;
+      &:hover {
+        outline: 5px solid $app-border-color;
+      }
+    }
+    .page-number{
+        float: right;
+    }
+    .next-btn{
+        padding-left: $app-margin-16;
+        margin-left: $app-margin-16;
+    }
+    .page-buttons {
+        margin-top: $app-margin-16;
+        margin-bottom: $app-margin-16;
+    }
+}

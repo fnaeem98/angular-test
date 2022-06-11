@@ -1,0 +1,20 @@
+<div class="container container-fluid image-app">
+    <banner-component></banner-component>
+    <loader-component></loader-component>
+    <div class="row">
+        <div *ngFor = "let imageItem of imageList$ | async" class="col-4">
+        <a routerLink="/image/{{imageItem.id}}" [state]="imageItem">
+            <img src="{{imageItem.download_url}}" class="img-fluid image-item"/>
+        </a>
+        </div>
+    </div>
+    <div class="row page-buttons">
+        <div class="col-12">
+            <button [disabled]="pageNo == 1" type="button" class="btn btn-primary" (click)="previousPage()">Previous Page</button>
+            <button type="button" class="btn btn-primary next-btn" (click)="nextPage()">Next Page</button>
+            <span class="page-number">Page No: {{pageNo}}</span>
+        </div>
+    </div>
+    <footer-component></footer-component>
+</div>
+      
